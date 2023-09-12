@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash ./lint || (echo "[!] Lint failed, commit aborted." && exit 1)

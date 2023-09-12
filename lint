@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ZIG=zig
+
+if [[ $1 == "--fix" ]]; then
+  OPTIONS=""
+else
+  OPTIONS="--check"
+fi
+
+for file in $(find . -name '*.zig'); do
+  $ZIG fmt $OPTIONS $file
+done
