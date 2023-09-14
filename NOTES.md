@@ -25,6 +25,8 @@ _ = one_plus_one;
 - `boolean` is no longer a `0` or `1`. good. It is printed as `true` or `false`.
 - Integer type can take any width of bits: `u7` or `i99` is allowed.
 - Error Union is similar to Go?
+- Modules imported by `@import` can be used before the `@import` statement.
+  - I'm now not sure but it's called `top-level declaration`
 
 ## Zig ecosystem
 
@@ -39,6 +41,8 @@ $ zig build-exe ./main.zig
                     @compileError("cannot format slice without a specifier (i.e. {s} or {any})");
                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
+
+- Zig allows in-file testing. Good so good.
 
 ## Zig std
 

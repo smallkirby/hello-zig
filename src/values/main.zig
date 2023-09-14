@@ -40,4 +40,7 @@ pub fn main() !void {
     print_error_union("number_or_error", number_or_error);
     number_or_error = 42;
     print_error_union("number_or_error", number_or_error);
+
+    const seven_bits: i7 = 0x3F;
+    print("seven_bits: 0b{b}\n", .{seven_bits});
 }
