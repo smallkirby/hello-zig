@@ -28,6 +28,12 @@ _ = one_plus_one;
 - Modules imported by `@import` can be used before the `@import` statement.
   - I'm now not sure but it's called `top-level declaration`
 
+### Variables
+
+- `threadlocal` variable is interesting.
+- I'm not sure how `comptime` qualifier is used. This type of const optimization would be done by the normal C compiler without explicitly telling it to do so.
+- Integers can be split by underscores, good.
+
 ## Zig ecosystem
 
 - Zig has built-in formatter, good really.
