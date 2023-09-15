@@ -27,6 +27,7 @@ _ = one_plus_one;
 - Error Union is similar to Go?
 - Modules imported by `@import` can be used before the `@import` statement.
   - I'm now not sure but it's called `top-level declaration`
+- No operator overloads, good.
 
 ### Variables
 
