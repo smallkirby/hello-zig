@@ -28,6 +28,28 @@ _ = one_plus_one;
 - Modules imported by `@import` can be used before the `@import` statement.
   - I'm now not sure but it's called `top-level declaration`
 - No operator overloads, good.
+- In zig, `comptime` and `runtime` seems to be distinguished clearly. For example, if the function can be evaluated to be `comptime`, array can be initialized with the function call:
+
+```zig
+var morep = [_]u32{getU32(3)} ** 10;
+```
+
+However, if some statements/expressions cannot be evaluated to be `comptime`, the above initialization fails:
+
+```zig
+var morep = [_]u32{getU32(3)} ** 10;
+var param: i32 = 2; // `:i32` is necessary to be `runtime`
+fn getU32(x: i32) i32 {
+    return 2 * param; // This operation is `runtime` due to `param`
+                      // so `getU32` cannot be evaluated at `comptime`.
+}
+```
+
+- Zig's array can have explicit *sentinel* elemnt.
+  - We can access `len`-th for sentinel.
+  - We cannot access ``len+1`-th. Compiler emits error. good.
+  - However, `.len` omits the sentinel element.
+  - Therefore, `string`(`[]const u8`) is printed without sentinel element. good, but strange.
 
 ### Variables
 
