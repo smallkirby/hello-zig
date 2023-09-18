@@ -57,6 +57,15 @@ fn getU32(x: i32) i32 {
 - I'm not sure how `comptime` qualifier is used. This type of const optimization would be done by the normal C compiler without explicitly telling it to do so.
 - Integers can be split by underscores, good.
 
+### Types
+
+- Zig supports built-in vector support with SIMD instructions, good.
+  - :thinking: > Note that excessively long vector lengths (e.g. 2^20) may result in compiler crashes on current versions of Zig.
+  - We CANNOT know the length of vector at runtime...? `@Vector` does not have `.len` property.
+  - `@shuffle()` seems a little bit strange and hacky to me. And its name should be `@select()` or something.
+  - ah, `@select()` is already used for something which selects one of two values based on a boolean condition.
+  - Comparison operators with `@Vector` becomes `@Vector(len, bool)`.
+
 ## Zig ecosystem
 
 - Zig has built-in formatter, good really.
