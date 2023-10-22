@@ -67,6 +67,13 @@ fn getU32(x: i32) i32 {
   - Comparison operators with `@Vector` becomes `@Vector(len, bool)`.
 - Zig's slice is just a fat pointer with length and ptr.
 - Zig's pointer type `*i32` must have aligned address, good.
+- Slices type is a little bit confusing:
+  - `*T`: single-item pointer
+  - `[*]T`: many-item pointer
+  - `[]T`: slice The length is determined at runtime.
+  - `*[N]T`: array. The length is determined at comptime.
+- If you slice with a comptime-known start/end position, you get a single-item array pointer (`*[N]T`) instead of slice.
+  - The only difference between slice and single-item array pointer is that the formater performs bounds checking.
 
 ## Zig ecosystem
 
