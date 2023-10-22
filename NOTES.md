@@ -65,6 +65,8 @@ fn getU32(x: i32) i32 {
   - `@shuffle()` seems a little bit strange and hacky to me. And its name should be `@select()` or something.
   - ah, `@select()` is already used for something which selects one of two values based on a boolean condition.
   - Comparison operators with `@Vector` becomes `@Vector(len, bool)`.
+- Zig's slice is just a fat pointer with length and ptr.
+- Zig's pointer type `*i32` must have aligned address, good.
 
 ## Zig ecosystem
 
