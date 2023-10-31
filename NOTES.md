@@ -74,6 +74,11 @@ fn getU32(x: i32) i32 {
   - `*[N]T`: array. The length is determined at comptime.
 - If you slice with a comptime-known start/end position, you get a single-item array pointer (`*[N]T`) instead of slice.
   - The only difference between slice and single-item array pointer is that the formater performs bounds checking.
+- You can get the parent struct ot a field with `@fieldParentPtr()` like as `container_of()`.
+  - I'm not sure the return type of `@fieldParentPtr()`. Doc says it returns a pointer bit you can assign it to a struct variable.
+- You can return `type` from a function. Then you can assign it to a variable.
+- All the struct in Zig is annonymous. They are named depending on the context.
+- `Tuple` is a struct with anonymous fields. Argunent ot `print()` is a tuple!
 
 ## Zig ecosystem
 
