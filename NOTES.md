@@ -80,6 +80,12 @@ fn getU32(x: i32) i32 {
 - All the struct in Zig is annonymous. They are named depending on the context.
 - `Tuple` is a struct with anonymous fields. Argunent ot `print()` is a tuple!
 
+### enum
+
+- You can specify the type of enum tield value. Good.
+- Enum can have method, great.
+
+
 ## Zig ecosystem
 
 - Zig has built-in formatter, good really.
