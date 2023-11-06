@@ -85,6 +85,21 @@ fn getU32(x: i32) i32 {
 - You can specify the type of enum tield value. Good.
 - Enum can have method, great.
 
+### union
+
+- Zig has a union type, super good.
+- Tagged union must be declared with `enum`.
+Both `enum` and `union` must have the exactly same fields.
+This seems a little bit redundant to me.
+- No, unions can be made to infer the enum tag type!
+
+```zig
+const Variant = union(enum) {
+  int: i32,
+  bool: bool,
+  none: void,
+}
+```
 
 ## Zig ecosystem
 
