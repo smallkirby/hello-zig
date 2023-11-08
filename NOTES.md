@@ -101,6 +101,13 @@ const Variant = union(enum) {
 }
 ```
 
+### Syntax
+
+- `break` can return a value.
+  - Blocks can be named.
+- Shadowing is NOT allowed.
+- `switch` can be used outside functions.
+
 ## Zig ecosystem
 
 - Zig has built-in formatter, good really.
