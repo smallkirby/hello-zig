@@ -107,6 +107,8 @@ const Variant = union(enum) {
   - Blocks can be named.
 - Shadowing is NOT allowed.
 - `switch` can be used outside functions.
+- `..` is exclusive and `...` is inclusive. But `..` can be used for slices and `...` is for `swich`. This is a little bit confusing. [#359](https://github.com/ziglang/zig/issues/359)
+- `for` can iterate over a multiple items, great.
 
 ## Zig ecosystem
 
